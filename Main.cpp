@@ -8,11 +8,12 @@ int main(){
     cin.tie(NULL);
     ll n;
     cin>>n;
-    vector<int>v(n);
-    for(auto i=0;i<n;i++) cin>>v[i];
-    ll ans=count(v.begin(), v.end(),1);
-    if(ans>0) cout<<"HARD"<<endl;
-    else cout<<"EASY"<<endl;
+    if(n%2==0){
+        cout<<n/2<<endl;
+    }
+    else{
+        cout<<(-(n+1)/2)<<endl;
+    }
     return 0;
 }
 
