@@ -1,0 +1,82 @@
+Recursion:
+-----------------------------------------------------------
+
+Mathematical Defination->It's a logical procedure,which is specidied by a subprocedure that yeilds value or instance of a function repectedly by applying a given routine operation.
+
+Recursion is defined when a function is called by applying some subroutine on the parameter by keeping an extra space overhead;
+
+--------------------------------------------------------------
+Step to solving recursion problem
+--------------------------------------------------------------
+
+find out the smallest subproblem for which we know the ans
+
+assume that for the given problem recursion will correctly calculate a subproblem.
+
+selfwork.
+
+--------------------------------------------------------------
+Example- Factorial
+--------------------------------------------------------------
+1)n=1 f(1)=1  (Base Case)
+2) claculate f(n-1) Recursion assumption
+3) selfwork return n*f(n-1).
+
+-------------------------------------------------------------
+Example: Factorial.
+
+Example: Fibanacci Series.
+
+Example:Print n natural number in increasing order.
+
+Example:Print n natural number in decreasing order.
+---------------------------------------------------
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define endl "\n"
+
+ll fact(ll n){
+    //Base case
+    if(n==1) return 1;
+    return n*fact(n-1);
+}
+
+ll fib(ll n){
+    //base case
+    if(n==0 || n==1) return n;
+    return fib(n-1)+fib(n-1);
+}
+
+void printinc(ll n){
+    if(n==0) return;
+    printinc(n-1);
+    cout<<n<<endl;
+}
+
+void printdec(ll n){
+    if(n==0) return;
+    cout<<n<<endl;
+    printdec(n-1);
+}
+
+int main()
+{
+    clock_t begin = clock();
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    ll n;
+    cin>>n;
+    cout<<fact(n)<<endl;
+    cout<<fib(n)<<endl;
+    printinc(n);
+    printdec(5); 
+
+    #ifndef ONLINE_JUDGE
+        clock_t end= clock();
+        cout<<"\n\nExecuted In: "<<double(end-begin) / CLOCKS_PER_SEC*1000<<" ms"<<endl;
+    #endif
+    return 0;
+}
+
+http://bit.ly/2023qh

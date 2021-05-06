@@ -1,0 +1,72 @@
+// #include<bits/stdc++.h>
+// using namespace std;
+// #define ll long long int
+// //ll ans[105];
+
+// // int countBits(int n){
+// //     int count=0;
+// //     while(n>0){
+// //         count += (n&1);
+// //         n==n>>1;
+// //     }
+// //     return count;
+// // }
+
+// // int countfast(int n){
+// //     int k=0;
+// //     while(n){
+// //         k++;
+// //         n=n & (n-1);
+// //     }
+// //     return k;
+// // }
+
+// //Extract ith bits of a number.
+//  int getithBit(int n,int i){
+//     return (n & (1<<i))!=0?1:0;
+//  }
+// //change the ith bit to 1
+//  void setitbit(int n,int i){
+//     int mask=1<<i;
+//     n=(n|mask);
+//  } 
+// //Clear the i th bit
+//  void clearBit(int n,int i){
+//     int mask=~(1<<i);
+//     n=n&mask;
+//  }
+//  //subsequence of a string
+ 
+
+// int main()
+// {
+//     //**************************
+//     #ifndef ONLINE_JUDGE
+//     freopen("input.txt","r",stdin);
+//     freopen("output.txt","w",stdout);
+//     #endif
+    
+//     ios_base::sync_with_stdio(false);
+//     cin.tie(NULL);
+//     //***************************
+//     //int a,b;
+//     //cin>>a>>b;
+    
+//     //sappose a and b .min no bits that i need to change a t0 b;
+//     //cout<<(a ^ b);
+//     //calculate no of set bit in a number;
+//     int n;
+//     cin>>n;
+//     cout<<countfast(n)<<endl;
+//     //cout<<countfast(n)<<endl;
+
+// }
+// //pair
+
+// // pair <int ,int>p_array[3];
+//     // p_array[0]={1,2};
+//     // p_array[1]={2,3};
+//     // p_array[2]={4,5};
+//     // for(int i=0;i<3;i++){
+//     //     cout<<p_array[i].first<<" "<<p_array[i].second<<endl;
+// // }
