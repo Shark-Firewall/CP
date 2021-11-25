@@ -79,4 +79,60 @@ int main()
     return 0;
 }
 
-http://bit.ly/2023qh
+// int number(int n){
+//   if(n==1 || n==2) return n;
+//   return number(n-1)+(n-1)*number(n-2);
+// }
+// int powerl(int a,int b){
+//   if(b==1) return a;
+//   return a*powerl(a,b-1);
+// }
+
+// int powerop(int a,int b){
+//   if(b==0) return 1;
+//   if(b==1) return a;
+//   int temp=powerop(a,b/2);
+//   if(b%2) return a*temp*temp;
+//   else return temp*temp;
+// }
+
+// void pattern2(int n,int i){
+//   if(n==0) return;
+//   if(i>0){
+//     cout<<"* ";
+//     pattern2(n,i-1);
+//   }
+//   else{
+//     cout<<endl;
+//     pattern2(n-1,i+1);
+//   }
+// }
+
+// int total=0;
+// int matrix1(int i,int j,int n,int m,string osf){
+//   if(i==n-1 ||  j==m-1){
+//     total+=1;
+//     cout<<osf<<endl;
+//     return;
+//   }
+//   if(i>=n || j>=m){
+//     return;
+//   }
+//   matrix1
+// }
+// void permutation(string str,string perm){
+//    if(str.size()==0){
+//     cout<<perm<<endl;
+//     return;
+//    }
+//    //for managing unique subset
+//    unordered_set<char>s;
+//    for(int i=0;i<str.size();i++){
+//     char ch=str[i];
+//     if(s.count(ch)==0){
+//       string ros=str.substr(0,i)+str.substr(i+1);
+//       s.insert(ch);
+//       permutation(ros,perm+ch);
+//     }
+//    }
+// }
