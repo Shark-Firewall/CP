@@ -11,6 +11,15 @@ using namespace std;
 
 int32_t main(){
     FIO;
-    
+    int n,d;
+    cin>>n;
+    cin>>d;
+    int count=0;
+    while(n>0){
+        int rem=n%10; 
+        n/=10;
+        if(rem==d) count++;
+    }
+    cout<<count<<endl;
     return 0;
 }
