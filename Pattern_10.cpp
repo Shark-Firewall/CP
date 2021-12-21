@@ -13,11 +13,26 @@ int32_t main(){
     FIO;
     int n;
     cin>>n;
-    int star=(n+1)/2;
+    int os=n/2;
+    int is=-1;
     for(int i=1;i<=n;i++){
-        for(int j=n;j>0;j--){
-        	if(i+j==(n+1))cout<<"*"<<"\t";
-        	else cout<<"\t";
+        for(int j=1;j<=os;j++){
+            cout<<"\t";
+        }
+        cout<<"*\t";
+        for(int k=1;k<=is;k++){
+            cout<<"\t";
+        }
+        if(i>1 and i<n){
+            cout<<"*\t";
+        }
+        if(i<=n/2){
+            os--;
+            is+=2;
+        }
+        else{
+            os++;
+            is-=2;
         }
         cout<<endl;
     }

@@ -1,6 +1,5 @@
-abc
-bac
-cab
-acb
-bca
-cba
+		*	
+	*		*	
+*				*	
+	*		*	
+		*	
