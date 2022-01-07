@@ -10,21 +10,19 @@
 #define FIO ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
 using namespace std;
 
+int max_array(vi &v,int n,int m){
+	if(n<=0)
+       return;
+    
+
+}
+
 int32_t main(){
     FIO;
     int n;
     cin>>n;
     vi v(n);
     loopin(0,n,v);
-    int prev=INT_MIN;
-    int count=0;
-    for(int i=0;i<v.size();i++){
-    	while(prev<=v[i]){
-    		v[i]++;
-    		count++;
-    	}
-    	prev=v[i];
-    }
-    cout<<count<<endl;
+    cout<<max_array(v,n,INT_MIN)<<endl;
     return 0;
 }

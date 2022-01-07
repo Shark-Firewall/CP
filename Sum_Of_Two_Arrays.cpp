@@ -9,40 +9,36 @@
 #define ps(x,y) fixed<<setprecision(y)<<x
 #define FIO ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
 using namespace std;
-
-void addarry(vi a,int n1,vi b,int n2){
-    int m=max(n1,n2);
-    vi res(0,m);
-    int temp=m-1;
-    while(n1>=0 && n2>=0){
-        res[temp]=a[n1-1]+b[n2-1];
-        n1--;
-        n2--;
-        temp--;
+            //   a     // //   b    //
+void addarry(int a,vi x,int b,vi y){
+    int m=max(a,b);
+    vi ans(m);
+    int i=a-1;
+    int j=b-1;
+    int k=m-1;
+    int carry=0;
+    while(k>=0){
+        int sum=x[i]+y[j]+carry;
+        int q=sum/10;
+        int r=sum%10;
+        
+        ans[k]=r;
+        carry=q;
+        i--;j--;k--;
     }
-    if(n1>=0){
-    	res[temp]=a[n1-1];
-    	n1--;
-    	temp--;
-    }
-    if(n2>=0){
-    	res[temp]=b[n2-1];
-    	n2--;
-    	temp--;
-    }
-    for(int i=0;i<res.size();i++){
-    	cout<<res[i]<<endl;
-    }
+    if(carry!=0) cout<<carry<<endl;
+    for(int i=0;i<m;i++) cout<<ans[i]<<endl;
 }
 
 int32_t main(){
     FIO;
-    int n1;cin>>n1;
-    vi a(n1);
-    loopin(0,n1,a);
-    int n2;cin>>n2;
-    vi b(n2);
-    loopin(0,n2,b);
-    addarry(a,n1,b,n2);
+    int a;cin>>a;
+    vi x(a);
+    loopin(0,a,x);
+    int b;cin>>b;
+    vi y(b);
+    loopin(0,b,y);
+    //fuction call
+    addarry(a,x,b,y);
     return 0;
 }

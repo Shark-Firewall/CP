@@ -10,21 +10,20 @@
 #define FIO ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
 using namespace std;
 
+void reverse_array(vi &v,int n,int i){
+    if(i==n){
+        return;
+    }
+    reverse_array(v,n,i+1);
+    cout<<v[i]<<endl;
+}
+
 int32_t main(){
     FIO;
     int n;
     cin>>n;
     vi v(n);
     loopin(0,n,v);
-    int prev=INT_MIN;
-    int count=0;
-    for(int i=0;i<v.size();i++){
-    	while(prev<=v[i]){
-    		v[i]++;
-    		count++;
-    	}
-    	prev=v[i];
-    }
-    cout<<count<<endl;
+    reverse_array(v,n,0);
     return 0;
 }
