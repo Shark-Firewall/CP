@@ -10,16 +10,15 @@
 #define FIO ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
 using namespace std;
 
-int max_array(vi &v,int n,int i){
-	
-}
-
 int32_t main(){
     FIO;
-    int n;
-    cin>>n;
-    vi v(n);
-    loopin(0,n,v);
-    cout<<max_array(v,n,0)<<endl;
+    int n;cin>>n;
+    int count=0;
+    int power=5;
+    while((n/power)>=1){
+    	count+=(n/power);
+    	power*=5;
+    }
+    cout<<count;
     return 0;
 }

@@ -19,7 +19,7 @@ int32_t main(){
     int prev=INT_MIN;
     int count=0;
     for(int i=0;i<v.size();i++){
-    	while(prev<=v[i]){
+    	while(prev>v[i]){
     		v[i]++;
     		count++;
     	}

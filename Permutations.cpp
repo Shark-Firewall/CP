@@ -10,16 +10,29 @@
 #define FIO ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
 using namespace std;
 
-int max_array(vi &v,int n,int i){
-	
-}
-
 int32_t main(){
     FIO;
     int n;
     cin>>n;
-    vi v(n);
-    loopin(0,n,v);
-    cout<<max_array(v,n,0)<<endl;
+    vi v;
+    if(n==1) cout<<1<<endl;
+    else if(n>1 and n<=3) cout<<"NO SOLUTION"<<endl;
+    else{
+    	int j=2;
+        while(j<=n){
+        	v.pb(j);
+        	j+=2;
+        }
+        int i=1;
+        while(i<=n){
+        	v.pb(i);
+        	i+=2;
+        }
+        for(int i=0;i<n;i++){
+        	cout<<v[i]<<" ";
+        }
+        cout<<endl;
+    }
+
     return 0;
 }

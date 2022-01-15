@@ -13,13 +13,7 @@ int32_t main(){
     FIO;
     int n;
     cin>>n;
-    vi v(n,0);
-    for(int i=0;i<n;i++)
-    {
-        cin>>v[i];
-    }
-    for(auto &i:v){
-    	cout<<(*i)<<endl;
-    }
+    vi v(n);
+    for(auto i:v) cout<<i<<endl;
     return 0;
 }
