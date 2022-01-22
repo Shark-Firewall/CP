@@ -9,11 +9,13 @@
 #define FIO ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
 using namespace std;
 
-int max_array(vi &v,int i,int n){
-	if(i==n-1) return v[i];
-	int m=max_array(v,i+1,n);
-	if(m>v[i]) return m;
-	else return v[i];
+int first_index(vi &v,int i,int x){
+    if(i==v.size()-1) return;
+    if(v[i]==x){
+        return i;
+    }
+	int equal=first_index(v,i+1,x);
+	return equal; 
 }
 
 int32_t main(){
@@ -21,6 +23,7 @@ int32_t main(){
     int n;cin>>n;
     vi v(n);
     for(int i=0;i<n;i++) cin>>v[i];
-    cout<<max_array(v,0,n)<<endl;
+    int x;cin>>x;
+    cout<<first_index(v,0,x)<<endl;
     return 0;
 }
