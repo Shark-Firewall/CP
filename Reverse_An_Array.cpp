@@ -9,27 +9,15 @@
 #define FIO ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
 using namespace std;
 
-bool duplicate(string s){
-	stack<char>st;
-	for(auto &i:s){
-		if(i==')'){
-			if(st.top()=='(') return true;
-			else{
-				while(st.top()!='('){
-					st.pop();
-				}
-				st.pop();
-			}
-		}
-		else st.push(i);
-	}
-	return false;
-}
-
 int32_t main(){
     FIO;
-    string s;
-    getline(cin,s);
-    cout<<(duplicate(s)?"true":"false")<<endl;
+    int n;
+    cin>>n;
+    vi v(n);
+    for(int i=0;i<n;i++) cin>>v[i];
+    reverse(v.begin(), v.end());
+    for(auto &i:v){
+    	cout<<i<<" ";
+    }
     return 0;
 }

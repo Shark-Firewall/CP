@@ -1,36 +1,23 @@
-#include <queue>
-#include <iostream>
-
+#include <bits/stdc++.h>
+#define endl '\n'
+#define int long long
+#define vi  vector<int>
+#define pb  push_back
+#define mod 1000000007
+#define test() int t;cin>>t;while(t--)
+#define ps(x,y) fixed<<setprecision(y)<<x
+#define FIO ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
 using namespace std;
 
+// void fun(int *ptr){
+//     *ptr=30;
+// }
 
-struct comparator
-{
-    bool operator()(int a, int b)
-    {
-        return a > b;
+int32_t main(){
+    FIO;
+    int n;
+    for(n=7;n!=0;n--){
+        printf("n=%d",n--);,
     }
-};
-
-
-int main()
-{
-    priority_queue<int, vector<int>, comparator> pq;
-    pq.push(10);
-	pq.push(30);
-	pq.push(20);
-	pq.push(70);
-	pq.push(40);
-	pq.push(50);
-	pq.push(80);
-	pq.push(90);
-	pq.push(32);
-
-    while (!pq.empty())
-    {
-        cout<<pq.top()<<" ";
-        pq.pop();
-    }
-
     return 0;
 }

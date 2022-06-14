@@ -9,27 +9,24 @@
 #define FIO ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
 using namespace std;
 
-bool duplicate(string s){
-	stack<char>st;
-	for(auto &i:s){
-		if(i==')'){
-			if(st.top()=='(') return true;
-			else{
-				while(st.top()!='('){
-					st.pop();
-				}
-				st.pop();
-			}
-		}
-		else st.push(i);
-	}
-	return false;
-}
-
 int32_t main(){
     FIO;
     string s;
-    getline(cin,s);
-    cout<<(duplicate(s)?"true":"false")<<endl;
+    cin>>s;
+    int len=s.size();
+    int first = s[0]-'0';
+    if(first==9) s[0]='9';
+    else if(first>4){
+    	s[0]=((9-first)+'0');
+    }
+
+    for(int i=1;i<len;i++){
+    	int a=s[i]-'0';
+    	if(a>4){
+    		s[i]=((9-a)+'0');
+    	}
+    }
+
+    cout<<s<<endl;
     return 0;
 }
