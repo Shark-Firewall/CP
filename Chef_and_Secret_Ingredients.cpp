@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+#define endl '\n'
+#define int long long
+#define vi  vector<int>
+#define pb  push_back
+#define mod 1000000007
+#define test() int t;cin>>t;while(t--)
+#define ps(x,y) fixed<<setprecision(y)<<x
+#define FIO ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
+using namespace std;
+
+int32_t main(){
+    FIO;
+    test(){
+    	int n;cin>>n;
+    	vector<string>v(n);
+        for(int i=0;i<n;i++) cin>>v[i];
+        vector<int>ans(26);
+        for(auto i:v){
+            vector<int>temp(26);
+            for(int j=0;j<i.size();j++){
+                temp[i[j]-'a']=1;
+            }
+            for(int x=0;x<26;x++) ans[x]+=temp[x];
+        }
+        cout<<count(ans.begin(),ans.end(),n)<<endl;
+    }
+    return 0;
+}
