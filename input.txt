@@ -1,3 +1,7 @@
-2
-INBY
-BYBY
+3
+abc
+abc
+a
+b
+abba
+baab
