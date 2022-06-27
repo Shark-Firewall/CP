@@ -1,7 +1,1 @@
-3
-abc
-abc
-a
-b
-abba
-baab
+30 20 10
