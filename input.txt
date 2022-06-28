@@ -1,2 +1,5 @@
-1
-700
+3
+Dodecahedron
+Octahedron
+Octahedron
+
