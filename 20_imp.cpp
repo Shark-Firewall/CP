@@ -11,18 +11,20 @@ using namespace std;
 
 int32_t main(){
     FIO;
-    unordered_set<char>st;
-    string s;
-    cin>>s;
-    // int count=0;
-    for(int i=0;i<s.size();i++){
-        char a=s[i];
-        st.insert(a);
+    test(){
+    	int a,b,n;
+    	cin>>a>>b>>n;
+    	int count=0;
+    	while(n>=a && n>=b){
+    		if(a>b){
+    			b+=a;
+    		}
+    		else{
+    			a+=b;
+    		}
+    		count++;
+    	}
+    	cout<<count<<endl;
     }
-    for(auto pr:st){
-        cout<<pr<<endl;
-    }
-    // if(count%2) cout<<"IGNORE HIM!"<<endl;
-    // else cout<<"CHAT WITH HER!"<<endl;
     return 0;
 }
