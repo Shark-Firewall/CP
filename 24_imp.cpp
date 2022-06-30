@@ -11,5 +11,12 @@ using namespace std;
 
 int32_t main(){
     FIO;
+    test(){
+    	string s;
+    	cin>>s;
+    	int digit=s[0]-'0'-1;
+    	int ans=digit*10+((s.size())*(s.size()+1))/2;
+        cout<<ans<<endl;
+    }
     return 0;
 }

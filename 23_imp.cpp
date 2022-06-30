@@ -11,5 +11,14 @@ using namespace std;
 
 int32_t main(){
     FIO;
+    int n;
+    cin >>n;
+    int sum=0;
+    int i=1;
+    while(sum<=n){
+    	sum+=((i*(i+1))/2);
+    	i++;
+    }
+    cout<<(i-2)<<endl;
     return 0;
 }
