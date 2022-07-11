@@ -27,9 +27,11 @@ void file_i_o()
 int main() {
 	file_i_o();
 	test(){
-		ll a,b;
-		cin>>a>>b;
-		if()
+		int a,b,x,y;
+		cin>>a>>b>>x>>y;
+		ll dis=abs(x-a)+abs(y-b);
+		if(dis&1) cout<<"NO"<<endl;
+		else cout<<"YES"<<endl;
 	}
 	return 0;
 }
