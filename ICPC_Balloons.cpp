@@ -3,12 +3,12 @@
 #define ll long long
 #define inf 1e18+10
 #define vi  vector<ll>
-#define vii vector<vector<int>>
+#define vii vector<vector<ll>>
 #define pi pair<int,int>
 #define mp make_pair
 #define pb  push_back
 #define mod 1e9+7
-#define test() int t;cin>>t;while(t--)
+#define test() ll t;cin>>t;while(t--)
 #define ps(x,y) fixed<<setprecision(y)<<x
 using namespace std;
 
@@ -27,23 +27,15 @@ void file_i_o()
 int main() {
 	file_i_o();
 	test(){
-		ll n;
-		cin>>n;
-		vi v(n);
-		ll sum=0;
-		ll mi=INT_MAX;
-		for(ll i=0;i<n;i++){
-           cin>>v[i];
-           sum+=v[i];
-           mi=min(mi,v[i]);
+		int n;cin>>n;
+		string s;
+		cin>>s;
+		set<char>st;
+		for(auto i:s){
+			st.insert(i);
 		}
-		if(mi==1){
-			cout<<"CHEF"<<endl;
-		}
-		else if((sum-2*n)&1){
-			cout<<"CHEF"<<endl;
-		}
-		else cout<<"CHEFINA"<<endl;
+		int ans=st.size()+n;
+		cout<<ans<<endl;
 	}
 	return 0;
 }

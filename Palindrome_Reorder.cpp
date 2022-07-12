@@ -2,7 +2,7 @@
 #define endl '\n'
 #define ll long long
 #define inf 1e18+10
-#define vi  vector<ll>
+#define vi  vector<int>
 #define vii vector<vector<int>>
 #define pi pair<int,int>
 #define mp make_pair
@@ -26,24 +26,33 @@ void file_i_o()
 
 int main() {
 	file_i_o();
-	test(){
-		ll n;
-		cin>>n;
-		vi v(n);
-		ll sum=0;
-		ll mi=INT_MAX;
-		for(ll i=0;i<n;i++){
-           cin>>v[i];
-           sum+=v[i];
-           mi=min(mi,v[i]);
+	string s;
+	getline(cin,s);
+	unordered_map<char,int>mp;
+	for(char ch:s){
+		map[ch]++;
+	}
+	string first="";
+	string last="";
+	string mid="";
+	int count=0;
+	for(auto i:mp){
+		if(mp.second&1){
+			count++;
+			mid+=mp.first;
 		}
-		if(mi==1){
-			cout<<"CHEF"<<endl;
+	}
+	if(count>1){
+		cout<<"No Solution"<<endl;
+		return 0;
+	}
+	string ans=""
+	for(auto i:mp){
+		if(mp.second==1){
+			mid+=mp.first;
+		else{
+			
 		}
-		else if((sum-2*n)&1){
-			cout<<"CHEF"<<endl;
-		}
-		else cout<<"CHEFINA"<<endl;
 	}
 	return 0;
 }
