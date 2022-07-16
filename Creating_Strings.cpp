@@ -13,17 +13,6 @@
 #define ps(x,y) fixed<<setprecision(y)<<x
 using namespace std;
 
-void solve(int n,int from,int to,int aux,int count){
-    if(n==0){
-    	
-    	return;
-    }
-    solve(n-1,from,aux,to,++count);
-    cout<<from<<" "<<to<<endl;
-    solve(n-1,aux,to,from,++count);
-
-}
-
 void file_i_o()
 {
 	ios_base::sync_with_stdio(0);
@@ -38,9 +27,16 @@ void file_i_o()
 
 int main() {
 	file_i_o();
-	int n;
-	cin>>n;
-	cout<<(pow(2,n)-1)<<endl;
-	solve(n,1,3,2,0);
+	string s;
+	cin>>s;
+	sort(all(s));
+	vector<string>v;
+	do{
+		v.pb(s);
+	}while(next_permutation(all(s)));
+	cout<<v.size()<<endl;
+    for(auto i:v){
+    	cout<<i<<endl;
+    }
 	return 0;
 }

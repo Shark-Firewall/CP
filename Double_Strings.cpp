@@ -7,22 +7,10 @@
 #define pi pair<int,int>
 #define mp make_pair
 #define pb  push_back
-#define all(x) x.begin(),x.end()
 #define mod 1e9+7
 #define test() ll t;cin>>t;while(t--)
 #define ps(x,y) fixed<<setprecision(y)<<x
 using namespace std;
-
-void solve(int n,int from,int to,int aux,int count){
-    if(n==0){
-    	
-    	return;
-    }
-    solve(n-1,from,aux,to,++count);
-    cout<<from<<" "<<to<<endl;
-    solve(n-1,aux,to,from,++count);
-
-}
 
 void file_i_o()
 {
@@ -38,9 +26,25 @@ void file_i_o()
 
 int main() {
 	file_i_o();
-	int n;
-	cin>>n;
-	cout<<(pow(2,n)-1)<<endl;
-	solve(n,1,3,2,0);
+	test(){
+		int n;
+		cin>>n;
+		vector<string>v(n);
+		unordered_map<string,bool>mp;
+		for(int i=0;i<n;i++){
+            cin>>v[i];
+            mp[v[i]]=true;
+		}
+		for(string s:v){
+			bool ans=false;
+			for(int i=1;i<s.size();i++){
+				string pref=s.substr(0,i);
+				string suff=s.substr(i,s.size()-i);
+				if(mp[pref] and mp[suff]) ans=true;
+			}
+			cout<<ans;
+		}
+		cout<<endl;
+	}
 	return 0;
 }

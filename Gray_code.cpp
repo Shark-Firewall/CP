@@ -13,15 +13,13 @@
 #define ps(x,y) fixed<<setprecision(y)<<x
 using namespace std;
 
-void solve(int n,int from,int to,int aux,int count){
-    if(n==0){
-    	
-    	return;
-    }
-    solve(n-1,from,aux,to,++count);
-    cout<<from<<" "<<to<<endl;
-    solve(n-1,aux,to,from,++count);
-
+void solve(int n){
+	for(int i=0;i<(1<<n);i++){
+		int val=(i^(i>>1));
+		bitset<32>r(val);
+		string s=r.to_string();
+		cout<<s.substr(32-n)<<endl;
+	}
 }
 
 void file_i_o()
@@ -40,7 +38,6 @@ int main() {
 	file_i_o();
 	int n;
 	cin>>n;
-	cout<<(pow(2,n)-1)<<endl;
-	solve(n,1,3,2,0);
+	solve(n);
 	return 0;
 }

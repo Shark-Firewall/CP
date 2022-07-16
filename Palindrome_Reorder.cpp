@@ -30,29 +30,28 @@ int main() {
 	getline(cin,s);
 	unordered_map<char,int>mp;
 	for(char ch:s){
-		map[ch]++;
+		mp[ch]++;
 	}
-	string first="";
-	string last="";
+	
 	string mid="";
 	int count=0;
 	for(auto i:mp){
-		if(mp.second&1){
+		if(i.second&1){
 			count++;
-			mid+=mp.first;
+			mid+=i.first;
 		}
 	}
 	if(count>1){
-		cout<<"No Solution"<<endl;
+		cout<<"NO SOLUTION"<<endl;
 		return 0;
 	}
-	string ans=""
+	string first="";
+	string last="";
 	for(auto i:mp){
-		if(mp.second==1){
-			mid+=mp.first;
-		else{
-			
-		}
+		string s(i.second/2,i.first);
+		first+=s;
+		last=s+last;
 	}
+	cout<<((count==1)?first+mid+last:first+last)<<endl;
 	return 0;
 }
